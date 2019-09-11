@@ -4,6 +4,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import ClickCounter from './click-counter/clickCounter';
 import JottoContainer from './jotto/JottoContainer';
+import ContainerComponent from './Hoc-exp/ContainerComponent';
+
 
 function App() {
   return (
@@ -31,7 +33,8 @@ function App() {
            <Link to={'/jotto'} className="nav-link"> Jotto App </Link>
          <Switch>
               <Route exact path='/' component={ClickCounter} />
-              <Route path='/jotto' component={JottoContainer} />
+              <Route exact path='/jotto' component={JottoContainer} />
+              <Route exact path='/hoc' component={ContainerComponent} />
               
           </Switch>
          </div>
