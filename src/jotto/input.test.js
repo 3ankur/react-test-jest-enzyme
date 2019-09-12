@@ -9,7 +9,7 @@ const setup =(initialState)=>{
 const store = storeFactory(initialState);
 //console.log(initialState);
 
-const wrapper = shallow(<Input store={store} />).dive().dive();;
+const wrapper = shallow(<Input store={store} />).dive().dive();//somehow its not returnchildren so did dive again
 return wrapper;
 }
 
